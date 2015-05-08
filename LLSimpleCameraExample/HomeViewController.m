@@ -132,11 +132,14 @@
 - (void)cameraViewController:(LLSimpleCamera *)cameraVC didCaptureImage:(UIImage *)image {
     
     // we should stop the camera, since we don't need it anymore. We will open a new vc.
+    NSLog(@"Camera stop");
     [self.camera stop];
     
+    NSLog(@"save to photos");
     [self saveImageToPhotos:image];
     if(self.save_state) self.save_counter = self.save_counter + 1;
     
+    NSLog(@"Camera start");
     [self.camera start];
     //ImageViewController *imageVC = [[ImageViewController alloc] initWithImage:image];
     //[self presentViewController:imageVC animated:NO completion:nil];
@@ -198,9 +201,9 @@
 - (void) dealWithCaculate {
     self.counter = self.counter + 5;
     NSInteger rest = self.counter % CAPTURE_INTERVAL;
-    if(!rest) {
-        [self.camera capture];
-    }
+    
+    if(rest == 0) [self.camera capture];
+    
     rest = CAPTURE_INTERVAL - rest;
     [self.snapButton setTitle:[NSString stringWithFormat:@"%li[%li]", (long)rest,(long)self.save_counter] forState:UIControlStateNormal];
     NSLog(@"timer: %li",(long)rest);
