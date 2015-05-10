@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="fieldCamera" destination="1MQ-bK-u7N" id="jg5-Pp-F5e"/>
+                <outlet property="fieldTimer" destination="GrD-RU-ufG" id="iDu-Iz-M5X"/>
+                <outlet property="stepperCamera" destination="Awo-sz-JRG" id="dxe-03-Bsv"/>
+                <outlet property="stepperTimer" destination="yIv-RY-1KA" id="8Py-cp-nHF"/>
+                <outlet property="view" destination="iN0-l3-epB" id="KqY-s3-2B5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-eX-aC7">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yIv-RY-1KA">
+                            <rect key="frame" x="498" y="50" width="94" height="29"/>
+                        </stepper>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-RU-ufG">
+                            <rect key="frame" x="141" y="50" width="349" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Timer Interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-Gq-Z5m">
+                            <rect key="frame" x="8" y="54" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Awo-sz-JRG">
+                            <rect key="frame" x="498" y="106" width="94" height="29"/>
+                        </stepper>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1MQ-bK-u7N">
+                            <rect key="frame" x="141" y="106" width="349" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Camera Interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPE-Sv-bgm">
+                            <rect key="frame" x="8" y="110" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yIv-RY-1KA" secondAttribute="trailing" constant="8" id="47Z-R4-a0L"/>
+                        <constraint firstItem="jeI-Gq-Z5m" firstAttribute="leading" secondItem="L5n-eX-aC7" secondAttribute="leading" constant="8" id="BU0-Fl-cKN"/>
+                        <constraint firstItem="Awo-sz-JRG" firstAttribute="leading" secondItem="1MQ-bK-u7N" secondAttribute="trailing" constant="8" id="F6C-dx-2hi"/>
+                        <constraint firstItem="GrD-RU-ufG" firstAttribute="leading" secondItem="jeI-Gq-Z5m" secondAttribute="trailing" constant="12" id="aVh-aU-MRg"/>
+                        <constraint firstItem="1MQ-bK-u7N" firstAttribute="leading" secondItem="UPE-Sv-bgm" secondAttribute="trailing" constant="12" id="lXv-zj-CAH"/>
+                        <constraint firstItem="yIv-RY-1KA" firstAttribute="leading" secondItem="GrD-RU-ufG" secondAttribute="trailing" constant="8" id="tI7-zh-A72"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="484" y="220"/>
+        </view>
+    </objects>
+</document>
