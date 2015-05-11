@@ -41,7 +41,10 @@
     
     [self.stepperTimer addTarget:self action:@selector(stepperTimerValueChanged:) forControlEvents:UIControlEventTouchUpInside];
     [self.stepperCamera addTarget:self action:@selector(stepperCameraValueChanged:) forControlEvents:UIControlEventTouchUpInside];
+    
     self.fieldTimer.text = [NSString stringWithFormat:@"%d", (int)self.stepperTimer.value];
+    self.fieldCamera.text = [NSString stringWithFormat:@"%d", (int)self.stepperCamera.value];
+    
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     [self.view addGestureRecognizer:tapGesture];
 }
